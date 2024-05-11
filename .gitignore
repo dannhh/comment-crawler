@@ -1,3 +1,1 @@
-data/products/*.json
-data/reviews/*.json
-data/users/*.json
+data/*/*.json
