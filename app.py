@@ -9,15 +9,15 @@ from bs4 import BeautifulSoup
 
 dict_product = {
     "dienthoai": "https://tiki.vn/api/v2/products?q=dien-thoai&page={page}",
-    "maytinhbang": "https://tiki.vn/api/v2/products?q=may-tinh-bang&page={page}",
-    "banphim": "https://tiki.vn/api/v2/products?q=ban-phim&page={page}",
-    "chuotmaytinh": "https://tiki.vn/api/v2/products?q=chuot-may-tinh&page={page}",
-    "donghothongminh": "https://tiki.vn/api/v2/products?q=dong-ho-thong-minh&page={page}",
-    "tainghe": "https://tiki.vn/api/v2/products?q=tai-nghe&page={page}",
-    "laptop": "https://tiki.vn/api/v2/products?q=laptop&page={page}",
-    "thietbiluutru": "https://tiki.vn/api/v2/products?q=thiet-bi-luu-tru&page={page}",
-    "thietbimang": "https://tiki.vn/api/v2/products?q=thiet-bi-mang&page={page}",
-    "linhkienmaytinh": "https://tiki.vn/api/v2/products?q=linh-kien-may-tinh&page={page}",
+    # "maytinhbang": "https://tiki.vn/api/v2/products?q=may-tinh-bang&page={page}",
+    # "banphim": "https://tiki.vn/api/v2/products?q=ban-phim&page={page}",
+    # "chuotmaytinh": "https://tiki.vn/api/v2/products?q=chuot-may-tinh&page={page}",
+    # "donghothongminh": "https://tiki.vn/api/v2/products?q=dong-ho-thong-minh&page={page}",
+    # "tainghe": "https://tiki.vn/api/v2/products?q=tai-nghe&page={page}",
+    # "laptop": "https://tiki.vn/api/v2/products?q=laptop&page={page}",
+    # "thietbiluutru": "https://tiki.vn/api/v2/products?q=thiet-bi-luu-tru&page={page}",
+    # "thietbimang": "https://tiki.vn/api/v2/products?q=thiet-bi-mang&page={page}",
+    # "linhkienmaytinh": "https://tiki.vn/api/v2/products?q=linh-kien-may-tinh&page={page}",
 }
 
 # api
