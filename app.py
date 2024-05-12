@@ -9,15 +9,26 @@ from bs4 import BeautifulSoup
 
 dict_product = {
     "dienthoai": "https://tiki.vn/api/v2/products?q=dien-thoai&page={page}",
-    # "maytinhbang": "https://tiki.vn/api/v2/products?q=may-tinh-bang&page={page}",
-    # "banphim": "https://tiki.vn/api/v2/products?q=ban-phim&page={page}",
-    # "chuotmaytinh": "https://tiki.vn/api/v2/products?q=chuot-may-tinh&page={page}",
-    # "donghothongminh": "https://tiki.vn/api/v2/products?q=dong-ho-thong-minh&page={page}",
-    # "tainghe": "https://tiki.vn/api/v2/products?q=tai-nghe&page={page}",
-    # "laptop": "https://tiki.vn/api/v2/products?q=laptop&page={page}",
-    # "thietbiluutru": "https://tiki.vn/api/v2/products?q=thiet-bi-luu-tru&page={page}",
-    # "thietbimang": "https://tiki.vn/api/v2/products?q=thiet-bi-mang&page={page}",
-    # "linhkienmaytinh": "https://tiki.vn/api/v2/products?q=linh-kien-may-tinh&page={page}",
+    "maytinhbang": "https://tiki.vn/api/v2/products?q=may-tinh-bang&page={page}",
+    "banphim": "https://tiki.vn/api/v2/products?q=ban-phim&page={page}",
+    "chuotmaytinh": "https://tiki.vn/api/v2/products?q=chuot-may-tinh&page={page}",
+    "donghothongminh": "https://tiki.vn/api/v2/products?q=dong-ho-thong-minh&page={page}",
+    "tainghe": "https://tiki.vn/api/v2/products?q=tai-nghe&page={page}",
+    "laptop": "https://tiki.vn/api/v2/products?q=laptop&page={page}",
+    "thietbiluutru": "https://tiki.vn/api/v2/products?q=o-cung-ssd&page={page}",
+    "thietbimang": "https://tiki.vn/api/v2/products?q=thiet-bi-mang&page={page}",
+    "linhkienmaytinh": "https://tiki.vn/api/v2/products?q=linh-kien-may-tinh&page={page}",
+    "loa": "https://tiki.vn/api/v2/products?q=loa-bluetooth&page={page}",
+    "kindle": "https://tiki.vn/api/v2/products?q=kindle&page={page}",
+    "tablet": "https://tiki.vn/api/v2/products?q=tablet&page={page}", 
+    "iphone": "https://tiki.vn/api/v2/products?q=iphone&page={page}", 
+    "macbook": "https://tiki.vn/api/v2/products?q=macbook&page={page}", 
+    "applewatch": "https://tiki.vn/api/v2/products?q=apple-watch&page={page}", 
+    "manhinh": "https://tiki.vn/api/v2/products?q=man-hinh-chinh-hang&page={page}", 
+    "gaminggear": "https://tiki.vn/api/v2/products?q=gaming-gear&page={page}", 
+    "smartband": "https://tiki.vn/api/v2/products?q=smart-band&page={page}", 
+    "adapter": "https://tiki.vn/api/v2/products?q=adapter-cu-sac&page={page}", 
+    "adapter": "https://tiki.vn/api/v2/products?q=bao-da-op-lung&page={page}", 
 }
 
 # api
@@ -25,19 +36,19 @@ product_api_url = "https://tiki.vn/api/v2/products/{id}"
 review_api_url = "https://tiki.vn/api/v2/reviews?product_id={id}"
 
 # file
-product_id_file = "product_ids.txt"
-product_data_file = "products.txt"
-product_file = r"products.csv"
+product_id_file = "product_ids_adapter.txt"
+product_data_file = "products_adapter.txt"
+product_file = r"products_adapter.csv"
 product_data_import_file = "product_data_import.json"
 product_data_import_wordpress = "product_data_import_wordpress.csv"
-product_id_file = "product_ids.txt"
-review_data_file = "reviews.txt"
-review_file = r"reviews.csv"
-review_data_import_file = "review_data_import.json"
-user_data_import_file = "user_data_import.json"
+product_id_file = "product_ids_adapter.txt"
+review_data_file = "reviews_adapter.txt"
+review_file = r"reviews_adapter.csv"
+review_data_import_file = "review_data_import_adapter.json"
+user_data_import_file = "user_data_import_adapter.json"
 
 digit = re.compile(r"\d+")
-NUM_PAGE = 100
+NUM_PAGE = 20
 
 headers = {"user-agent": "my-app/0.0.1", "Content-Type": "application/json"}
 

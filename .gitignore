@@ -1,1 +1,3 @@
-data/*/*.json
+data/*/*/*.json
+processed_data/*.csv
+reviews/txt

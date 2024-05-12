@@ -5,9 +5,14 @@ import regex as re
 import string
 import emoji
 
-from vncorenlp import VnCoreNLP
+import py_vncorenlp
 from nltk import flatten
+import os
+import sys
 
+current_file_path = os.path.abspath(__file__)
+parent_directory = os.path.dirname(current_file_path)
+sys.path.append(parent_directory)
 
 # Remove HTML code
 def remove_HTML(text):
@@ -170,7 +175,7 @@ replace_list = {
     '⭐': 'star', '*': 'star', '🌟': 'star',
 }
 
-with open('utils/teencode.txt', encoding='utf-8') as f:
+with open(f'{parent_directory}/teencode.txt', encoding='utf-8') as f:
     for pair in f.readlines():
         key, value = pair.split('\t')
         replace_list[key] = value.strip()
@@ -185,11 +190,12 @@ def normalize_acronyms(text):
     return emoji.demojize(' '.join(words)) # Remove Emojis
 
 
-# # Word segmentation
-# annotator = VnCoreNLP('VnCoreNLP/VnCoreNLP-1.1.1.jar') 
-# def word_segmentation(text):
-#     words = annotator.tokenize(text)
-#     return ' '.join(word for word in flatten(words))
+
+# Word segmentation
+rdrsegmenter = py_vncorenlp.VnCoreNLP(annotators=["wseg"], save_dir=f'{parent_directory}/vncorenlp')
+def word_segmentation(text):
+    words = rdrsegmenter.word_segment(text)
+    return ' '.join(word for word in flatten(words))
 
 
 # Remove unnecessary characters
